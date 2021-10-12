@@ -1,5 +1,5 @@
 #include "menu.h"
-#include "strophoid.h"
+#include "/home/bar1k/Library/strophoid/include/strophoid.h"
 
 int main() {
     int command;

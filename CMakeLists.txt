@@ -3,11 +3,8 @@ project(Prog2)
 
 set(CMAKE_CXX_STANDARD 20)
 
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
+link_directories(/home/bar1k/Library/strophoid/lib)
 
 add_executable(Prog2 main.cpp menu.h menu.cpp)
 
-include(FindPkgConfig)
-find_package(Strophoid REQUIRED)
-include_directories(${STROPHOID_INCLUDE_DIR})
-target_link_libraries(${PROJECT_NAME} ${STROPHOID_LIBRARY})
+target_link_libraries(Prog2 LINK_PUBLIC libstrophoid.a)
